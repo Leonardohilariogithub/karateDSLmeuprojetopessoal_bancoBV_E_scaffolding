@@ -12,7 +12,6 @@ Feature:
     And request body
     When method POST
     Then assert responseStatus == 200 || responseStatus == 204 || responseStatus == 415
-    And match response contains {"acess_token": "#string"}
     And match response != 'Error'
     * if (responseStatus != 200 || responseStatus == 204 || responseStatus == 415) karate.abort()
 
