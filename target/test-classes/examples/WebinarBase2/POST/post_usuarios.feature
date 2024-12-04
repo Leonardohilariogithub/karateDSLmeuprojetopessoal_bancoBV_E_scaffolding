@@ -109,7 +109,7 @@ Feature: Praticando karate framework com API Serverest
     * karate.write(emailInfo, 'target/classes/examples/WebinarBase2/POST/json/emailInfo.json')
 
     # Cria o e-mail dinamicamente com o número incrementado
-    * def email = 'hilarioleo' + emailInfo.emailNumero + 'gmail.com'
+    * def email = 'hilarioleo' + emailInfo.emailNumero + '@gmail.com'
     * print 'E-mail gerado:', email
 
     # Cria o corpo da requisição utilizando o e-mail

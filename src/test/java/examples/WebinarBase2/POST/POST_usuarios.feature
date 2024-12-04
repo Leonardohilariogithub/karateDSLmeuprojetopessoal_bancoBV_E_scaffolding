@@ -8,7 +8,8 @@ Feature: Praticando karate framework com API Serverest
     # * if (!karate.get('emailNumero')) karate.set('emailNumero', 0)
 
     # Carregar o arquivo JSON que contém o número do e-mail externo
-    * def emailInfo = read('classpath:examples/WebinarBase2/POST/json/emailInfo.json')
+    #* def emailInfo = read('classpath:examples/WebinarBase2/POST/json/emailInfo.json')
+    * def NumberUtil = Java.type('examples/WebinarBase2/POST/ultils')
 
   @ignore
   Scenario: cadastrar usuarios com sucesso unico
@@ -130,3 +131,4 @@ Feature: Praticando karate framework com API Serverest
     When method POST
     Then status 201
     And match response.message == "Cadastro realizado com sucesso"
+

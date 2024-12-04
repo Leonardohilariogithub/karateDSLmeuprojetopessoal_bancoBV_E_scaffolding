@@ -43,4 +43,9 @@ Feature: sample karate test script
     # When method get
     # Then status 200
     # And match response contains user
-  
+
+  Scenario: Validar que o campo de e-mail segue o padrão correto
+    Given url 'https://jsonplaceholder.typicode.com/users'
+    When method GET
+    Then status 200
+    And match response.emails[0] == /^[_A-Za-z0-9-]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,})$/
