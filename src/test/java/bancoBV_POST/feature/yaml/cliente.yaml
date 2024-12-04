@@ -1,12 +1,3 @@
-validos:
-  accountNumber: 123456789
-  proxy: 123
-  produto: 9
-invalidos:
-    accountNumber:
-    proxy:
-    produto:
-nulos:
-    accountNumber:
-    proxy:
-    produto:
+cliente_cpf:
+  cpf: "123456789"
+  senha: 123456
