@@ -9,7 +9,7 @@ Feature: Praticando karate framework com API Serverest
 
     # Carregar o arquivo JSON que contém o número do e-mail externo
     #* def emailInfo = read('classpath:examples/WebinarBase2/POST/json/emailInfo.json')
-    * def NumberUtil = Java.type('examples/WebinarBase2/POST/ultils')
+    #* def NumberUtil = Java.type('examples/WebinarBase2/POST/ultils')
 
   @ignore
   Scenario: cadastrar usuarios com sucesso unico
@@ -47,7 +47,7 @@ Feature: Praticando karate framework com API Serverest
     Then status 400
     And match response.message == "Este email já está sendo usado"
 
-  #@testUnico
+  @testUnico
   Scenario: cadastrar usuarios com sucesso com body em arquivo json
 
     #Randomico com varios caracteres
@@ -99,7 +99,7 @@ Feature: Praticando karate framework com API Serverest
     Then status 201
     And match response.message == "Cadastro realizado com sucesso"
 
-  @testUnico
+  #@testUnico
   Scenario: Teste de criação de usuário com e-mail arquivo externo / nao funcionou!!!!!!tentar novamente
 
    # Incrementa o número do e-mail
